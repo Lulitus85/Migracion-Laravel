@@ -36,5 +36,10 @@ class SeriesController extends Controller
 
         return redirect ('/series');
     }
+
+    public function show($id){
+        $serie = Series::find($id);
+        return view('series.detalleSerie')->with('serie',$serie);
+    }
     
 }

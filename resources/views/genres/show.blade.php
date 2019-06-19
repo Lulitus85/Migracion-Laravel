@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="offset-2 col-6">
-<h1>Películas del Género: {{$genre->id}} </h1>
+<h1>Películas del Género: {{$genre->name}} </h1>
 <ul>
 @foreach($genre->movies as $movie)
     <li>
@@ -14,7 +14,7 @@
 <br>
 <hr>
 <br>
-<h1>Series del Género: {{$genre->id}} </h1>
+<h1>Series del Género: {{$genre->name}} </h1>
 <ul>
 @foreach($genre->series as $serie)
     <li>

@@ -73,10 +73,17 @@ Route::group(['prefix'=>'series'], function(){
     Route::get('/','SeriesController@index');
     Route::get('/add','SeriesController@create');
     Route::post('/add','SeriesController@store');
+    Route::get('/{id}','SeriesController@show');
+    Route::get('/{id}/update', 'SeriesController@edit');
+    Route::patch('/{id}/update','SeriesController@update');
+    Route::delete('/{id}','SeasonController@destroy');
 });
 
 Route::group(['prefix'=>'seasons'], function(){
     Route::get('/','SeasonController@index');
+    Route::get('/add/{id}','SeasonController@create');
+    Route::post('/add/{id}','SeasonController@store');
+    
 });
 
 Route::group(['prefix'=>'episodes'], function(){

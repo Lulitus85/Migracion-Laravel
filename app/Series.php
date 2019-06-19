@@ -9,7 +9,7 @@ class Series extends Model
     protected $guarded=[];
 
     public function seasons(){
-        return $this->hasMany(Season::class);
+        return $this->hasMany(Season::class,'serie_id');
     }
 
     public function genre(){
